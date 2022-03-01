@@ -1,0 +1,161 @@
+/* Custom styles */
+/*
+DePaul IHS
+*/
+
+@font-face {
+    font-family: 'GibsonSemiBold';
+    src: url('/css/fonts/gibson-semibold-webfont.eot');
+    src: url('/css/fonts/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/gibson-semibold-webfont.woff') format('woff'),
+         url('/css/fonts/gibson-semibold-webfont.ttf') format('truetype'),
+         url('/css/fonts/gibson-semibold-webfont.svg#GibsonSemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GibsonBold';
+    src: url('/css/fonts/gibson-bold-webfont.eot');
+    src: url('/css/fonts/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/gibson-bold-webfont.woff') format('woff'),
+         url('/css/fonts/gibson-bold-webfont.ttf') format('truetype'),
+         url('/css/fonts/gibson-bold-webfont.svg#GibsonBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ColaborateThinRegular';
+    src: url('/css/fonts/ColabThi-webfont.eot');
+    src: url('/css/fonts/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/ColabThi-webfont.woff') format('woff'),
+         url('/css/fonts/ColabThi-webfont.ttf') format('truetype'),
+         url('/css/fonts/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ColaborateRegRegular';
+    src: url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.eot');
+    src: url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.woff') format('woff'),
+         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.ttf') format('truetype'),
+         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.svg#ColaborateRegRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'AlegreyaBold';
+    src: url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.eot');
+    src: url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.woff') format('woff'),
+         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.ttf') format('truetype'),
+         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.svg#AlegreyaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+  overflow: hidden;
+  background-color: #060606;
+}
+    
+body { 
+  font: 18px/1.3em 'ColaborateThinRegular', sans-serif;
+  background-color: #060606;
+}
+
+h1 {
+  font: 32px/1em 'GibsonBold', serif;
+  text-transform: uppercase;
+  color: #827E7E;
+}
+
+h2 {
+  font: 22px/1em 'GibsonBold', serif;
+  text-transform: uppercase;
+  color: #827E7E;
+}
+
+a:link {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+a:visited{
+    color: white;
+}
+
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  color: white;
+  margin: 15px 0 0 0;
+  width: 80%;
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.body-container{
+  margin-top: 30px;
+  overflow: hidden;
+  width: calc(100vw - 30px);
+}
+
+#table-container-table_filter{
+  color: white;
+  text-align: left;
+}
+
+#table-container-table_wrapper > .row {
+  flex-direction: row-reverse;
+}
+
+#table-container-table_wrapper table {
+  background-color: lightgray;
+}
+
+.btn-info-container{
+  margin-top: 15px;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.paggination-btn{
+  padding: 10px;
+  background: #f80;
+  border-radius: 10px;
+}
+
+.dataTables_scrollHead table{
+  min-width: calc(100vw - 30px);
+}
+
+.dataTables_scrollBody table{
+  min-width: calc(100vw - 30px);
+}

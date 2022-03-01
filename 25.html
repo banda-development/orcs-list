@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSV to HTML Table</title>
+    <meta name="author" content="Derek Eder">
+    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <div class="container" style="position: relative; top: 0; left: 0;">
+        <div class="header-container">
+            <span>Сайт с видео и фото материалами заблокирован в РФ на основании решения Генпрокуратуры РФ.</span>
+            <span>Воспользовавшись VPN вы можете получить к нему доступ <a href="https://200rf.com" target="_blank">200rf.com</a>.</span>
+            <span>Основной канал информации - <a href="https://t.me/rf200_now/79" target="_blank">Телеграм канал</a></span>
+        </div>
+        <div class="body-container">
+            <div id="table-container">
+
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="paggination-btn"><a href="/24.html">Previous</a></div>
+            <div class="paggination-btn"><a href="/26.html">Next</a></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/csv_to_html_table.js"></script>
+
+    <script>
+        function format_link(link) {
+            if (link)
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+            else return "";
+        }
+
+        CsvToHtmlTable.init({
+            csv_path: "data/data_25.csv",
+            element: "table-container",
+            allow_download: false,
+            csv_options: {
+                separator: ",",
+                delimiter: '"'
+            },
+            datatables_options: {
+                info: false,
+                paging: false,
+                scroller: true,
+                scrollCollapse: true,
+                scrollY: 400,
+                scrollX: 400,
+            },
+            custom_formatting: []
+        });
+    </script>
+</body>
+
+</html>
